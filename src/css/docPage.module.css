@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+/** =============
+ * Sidebar styling
+**  ============= */
+
+/** font-family: 'Noto Sans', sans-serif; **/
+
+/** Hamburger Styling */
+
+.hamburger {
+  position: fixed;
+  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  outline: none;
+  font-size: 2rem;
+  border: none;
+  background: transparent;
+  color: #84cc1f;
+}
+
+.toggle {
+  display: none;
+}
+
+.sidebarContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 18%;
+  bottom: 0;
+  min-height: 100vh;
+  border-right: 2px solid #eee;
+}
+
+.containerWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.sidebarLogo {
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 40%;
+  height: 40%;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+.listItem {
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.active {
+  display: block;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #84cc1f;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+}
+
+.active:hover {
+  color: #000;
+}
+
+.nonActive {
+  width: 100%;
+  display: block;
+  font-size: 1.3rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+}
+
+.nonActive:hover {
+  background: #caf291;
+  color: #000;
+}
+
+.socialLogoutDiv {
+  margin-top: 6vw;
+}
+
+.logoutDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutLink {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.4rem 1.5rem;
+  outline: solid;
+  outline-color: red;
+  outline-width: 2px;
+  color: red;
+  border-radius: 3px;
+  background: none;
+  border: none;
+}
+
+.logoutLink:hover {
+  background: red;
+  color: #fff;
+}
+
+.socialLink {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/** ==================
+** Doctors Page styles
+====================== */
+
+.doctorsContainer {
+  width: 82%;
+  position: absolute;
+  left: 18%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.detailContainer {
+  width: 82%;
+  position: relative;
+  left: 18%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.header {
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.header > h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+}
+
+.doctorSingle {
+  text-decoration: none;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.border {
+  border-bottom: 2px dotted #3e3e3e;
+}
+
+/** ======================
+ * Doctor's Details Styles
+==========================
+*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 50px auto;
+  gap: 50px;
+}
+
+.docImage {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.doctorInfoDiv {
+  width: 50%;
+  margin: auto;
+}
+
+.doctorInfo > h1 {
+  color: #0ea5e9;
+  text-align: center !important;
+}
+
+.doctorInfo > p {
+  text-align: center !important;
+}
+
+.doctorInfo {
+  text-align: center !important;
+}
+
+.reserve {
+  background-color: #97bf11;
+  border-radius: 25px;
+}
+
+.reserveDiv {
+  margin-top: 40px;
+}
+
+.reserveBtn {
+  background-color: #97bf11 !important;
+  border: none !important;
+  color: white !important;
+  font-size: larger !important;
+  font-weight: 800 !important;
+}
+
+.backNav {
+  z-index: 99;
+  position: absolute;
+  top: 90vh;
+  width: 60px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #97bf11;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+/** Media Query */
+
+@media (min-width: 767px) {
+  .sidebarContainer { display: block; }
+  .hamburger { display: none; }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-top: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .doctorsContainer,
+  .detailContainer {
+    width: 100%;
+    position: initial;
+  }
+
+  .sidebarContainer {
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 0;
+    transition: width 5s ease-out;
+    bottom: 0;
+    min-height: 100vh;
+    border-right: 2px solid #eee;
+    background: #fff;
+  }
+
+  .active,
+  .nonActive {
+    font-size: 1.1rem;
+  }
+
+  .socialLogoutDiv {
+    margin-top: 10rem;
+  }
+
+  .toggle {
+    position: fixed;
+    width: 60%;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    background: #fff;
+    transition: width 5s ease-out;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 80px auto;
+    gap: 50px;
+  }
+
+  .docImage {
+    display: block;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 100%;
+  }
+
+  .doctorInfoDiv {
+    width: 90%;
+  }
+
+  .img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 25px;
+  }
+}

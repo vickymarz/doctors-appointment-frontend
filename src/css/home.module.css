@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.container {
+  background-image:
+    linear-gradient(to right, #99e428de, #a7f334a2),
+    url('../assets/images/signup-bg.jpg');
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  font-stretch: expanded;
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  animation: title 1s ease-in-out;
+  font-weight: bold;
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  75% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.motto {
+  font-style: italic;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  animation: motto 2s ease-in-out;
+  font-size: 1.2rem;
+}
+
+@keyframes motto {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.nav {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  margin: auto;
+}
+
+.login a {
+  background-color: #ca9100;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.signup a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.signup:hover a,
+.login:hover a {
+  color: white;
+}
+
+.nav ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    bottom: 25%;
+    margin: auto;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .signup a {
+    color: white;
+    border: 2px solid #ca9100;
+    font-size: 1.2rem;
+  }
+
+  .login a {
+    background-color: #ca9100;
+    color: white;
+    font-size: 1.2rem;
+    border: 2px solid #ca9100;
+  }
+
+  .nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 3rem;
+    text-align: center;
+    border-radius: 30px;
+  }
+}

@@ -1,0 +1,138 @@
+/* stylelint-disable no-descending-specificity */
+.sessionForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(to right, #99e428de, #a7f334a2),
+    url('../assets/images/background.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sessionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 40px 40px;
+  width: 30%;
+  background: #fff;
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset,
+    rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1baaea;
+}
+
+.line {
+  width: 10%;
+  height: 10px;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  margin-bottom: 40px;
+  border-bottom: solid 2px #44522e;
+}
+
+.form input {
+  background: #fff;
+  color: rgb(116, 114, 114);
+  outline: none;
+  border: none;
+  line-height: 0;
+  padding: 7px;
+}
+
+.form input:focus,
+.form input:valid {
+  outline: none;
+  border: none;
+  line-height: 0;
+  padding: 7px;
+  background: #fff;
+}
+
+.formGroup > label {
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  color: #0ea5e9;
+  font-size: 1.2rem;
+}
+
+.inputField:focus + .inputLabel,
+.inputField:valid + .inputLabel {
+  transform: translateY(-25px);
+}
+
+.submitBtn > button {
+  background: #feb500;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.submitBtn button:hover {
+  background-color: #ca9100;
+}
+
+.link {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.errorMsg {
+  margin-bottom: 1rem;
+  color: red;
+}
+
+.success {
+  color: #05c105;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 854px) {
+  .sessionContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 563px) {
+  .sessionContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .sessionContainer {
+    width: 90%;
+  }
+}
